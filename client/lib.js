@@ -1,3 +1,8 @@
+// Support Meteor >= 1.6
+// Meteor.autorun(function) is to be Tracker.autorun(function)
+
+import { Tracker } from 'meteor/tracker';
+
 Accounts._hooksLogin = Accounts._hooksLogin || [];
 Accounts._hooksLogout = Accounts._hooksLogout || [];
 
@@ -25,7 +30,7 @@ Accounts._callHooksLogout = function() {
   });
 }
 
-Meteor.autorun(function() {
+Tracker.autorun(function() {
   if (Meteor.userId()) {
     Accounts._callHooksLogin();
   } else {

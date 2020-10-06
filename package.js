@@ -1,14 +1,15 @@
 Package.describe({
-  name: "gwendall:auth-client-callbacks",
+  name: "shathaway:auth-client-callbacks",
   summary: "Adds client-side onLogin and onLogout methods",
-  version: "0.1.0"
+  version: "0.1.6"
 });
 
 Package.on_use(function (api, where) {
 
   api.use([
-    "underscore@1.0.1",
-    "accounts-base@1.1.2"
+    "underscore",
+    "accounts-base",
+    "tracker"
   ], "client");
 
   api.imply([

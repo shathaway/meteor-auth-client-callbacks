@@ -3,6 +3,9 @@
 - If you want to help, please reach out to gwendall.esnault@gmail.com
 ```
 
+This package is edited to reference Tracker.autorun() instead of Meteor.autorun().
+This edit supports Meteor versions >= 6.00.
+
 Meteor Auth Client Callbacks
 ============================
 
