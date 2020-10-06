@@ -1,7 +1,8 @@
 // Support Meteor >= 1.6
 // Meteor.autorun(function) is to be Tracker.autorun(function)
 
-import { Tracker } from 'meteor/tracker';
+// Note: Tracker is already declared as var Tracker = Package.tracker.Tracker
+// import { Tracker } from 'meteor/tracker';
 
 Accounts._hooksLogin = Accounts._hooksLogin || [];
 Accounts._hooksLogout = Accounts._hooksLogout || [];
